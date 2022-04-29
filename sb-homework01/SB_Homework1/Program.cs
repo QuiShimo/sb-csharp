@@ -7,7 +7,7 @@ namespace SB_Homework1
         static void Main(string[] args)
         {
             // Задание 1
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!!!");
 
             // Задание 2
             Console.Write("Hello ");
