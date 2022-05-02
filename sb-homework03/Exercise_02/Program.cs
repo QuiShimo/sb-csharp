@@ -21,6 +21,7 @@ namespace SB_Homework03.Exercise_02
             {
                 Console.Write("Номинал {0} карты: ", i + 1);
                 string scoreCard = Console.ReadLine();
+                
                 switch (scoreCard)
                 {
                     case "2":
