@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Exercise_02
+namespace SB_Homework03.Exercise_02
 {
     internal class Program
     {

@@ -6,35 +6,14 @@ namespace SB_Homework03.Exercise_01
     {
         static void Main(string[] args)
         {
-            // Задание 1
-            Console.WriteLine("Приложение по определению чётного или нечётного числа");
+            int number;
 
-            while (true)
-            {
-                Console.Write("Введите число: ");
-                // проверяем удалось ли преобразовать строку в число 
-                if (int.TryParse(Console.ReadLine(), out int number))
-                {
-                    // если удалось получить число, проверяем на четность
+            Console.WriteLine("Приложение по определению чётного или нечётного числа\nВведите число: ");
+            
+            while (!int.TryParse(Console.ReadLine(), out number))
+                Console.Write("Повторите ввод числа: ");
 
-                    if (number % 2 == 0)
-                    {
-                        Console.WriteLine("Число четное!");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Число нечетное!");
-                    }
-                    
-                    // выходим из цикла
-                    break;
-                }
-                else
-                {
-                    // если приобразование не удалось, просим повторить ввод числа
-                    Console.Write("Повторите ввод числа: ");
-                }
-            }
+            Console.WriteLine(number % 2 == 0 ? "Число четное!" : "Число нечетное!");
 
             Console.ReadKey();
         }
