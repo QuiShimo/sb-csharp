@@ -12,10 +12,8 @@ namespace SB_Homework03.Exercise_01
             while (true)
             {
                 Console.Write("Введите число: ");
-                // проверяем удалось ли преобразовать строку в число
-                bool check = int.TryParse(Console.ReadLine(), out int number);
-
-                if (check)
+                // проверяем удалось ли преобразовать строку в число 
+                if (int.TryParse(Console.ReadLine(), out int number))
                 {
                     // если удалось получить число, проверяем на четность
 
