@@ -1,7 +1,7 @@
 # Практическая работа №1 Skillbox
 ## Что входит в задание
 * [Задание 1. Вывод "Hello world!" в консоль](#задание-1)
-* [Задание 2. Различие методов Write и WriteLine](https://github.com/QuiShimo/sb-homework01/edit/master/README.md#задание-2)
+* [Задание 2. Различие методов Write и WriteLine](#задание-2)
 
 ## Задание 1
 
