@@ -8,7 +8,7 @@ namespace Exercise_02
         {
             int lenght;
             int[] array;
-            int minNumber = int.MinValue;
+            int minNumber = int.MaxValue;
 
             Console.Write("Введите длину последовательности: ");
             lenght = InputNumber();
@@ -17,7 +17,7 @@ namespace Exercise_02
 
             for(int i = 0; i < array.Length; i++)
             {
-                Console.Write("Введите {}-й элемент последовательности: ", i + 1);
+                Console.Write("Введите {0}-й элемент последовательности: ", i + 1);
                 array[i] = InputNumber();
             }
 
