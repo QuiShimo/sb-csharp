@@ -33,7 +33,7 @@ namespace Exercise_01
             Console.WriteLine("Сумма элементов: {0}", sum);
         }
 
-        private static int InputNumber()
+        public static int InputNumber()
         {
             int number;
 
