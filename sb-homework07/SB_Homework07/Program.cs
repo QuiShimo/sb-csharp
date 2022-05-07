@@ -5,17 +5,6 @@ namespace SB_Homework07
 {
     internal class Program
     {
-        struct Employe
-        {
-            public int id;
-            public string name;
-            public int age;
-            public int height;
-            public string birthday;
-            public string birthplace;
-            public DateTime dateCreate;
-        }
-
         private static string path = "textfile.txt";
 
         static void Main(string[] args)
