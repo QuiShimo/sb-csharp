@@ -5,100 +5,75 @@ namespace SB_Homework07
 {
     internal class Program
     {
-        private static string path = "textfile.txt";
 
         static void Main(string[] args)
         {
-            CheckFileExists();
-
             bool isWork = true;
+            EmployeeData employeeData = new EmployeeData("text.txt");
+
             while (isWork)
             {
-                Console.WriteLine("========= Меню =========");
-                Console.WriteLine("1 - Вывести данные на экран");
-                Console.WriteLine("2 - Добавить запись");
-                Console.WriteLine("3 - Выход");
-
-                switch (CheckInputNumber())
-                {
-                    case 1:
-                        PrintData();
-                        break;
-                    case 2:
-                        InputData();
-                        break;
-                    default:
-                        isWork = false;
-                        break;
-                }
+                MainMenu(employeeData);
             }
 
-
         }
-    
-
-        private static void PrintData()
-        {           
-            using (StreamReader sr = new StreamReader(path))
-            {
-                string? line;
-
-                while ((line = sr.ReadLine()) != null)
-                {
-                    Console.WriteLine("Сотрудник #-{0}\nДобавлен: {1}\nФИО: {2}\n" +
-                        "Возраст: {3}\nРост: {4}\nДата рождения: {5}\nМесто Рождения: {6}", line.Split("#"));
-                } 
-            }
-        }
-
-        private static void InputData()
+        
+        private static void MainMenu(EmployeeData employeeData)
         {
+            Console.Clear();
+            Console.WriteLine("======= Главное меню =======");
+            Console.WriteLine("1. Добавить запись");
+            Console.WriteLine("2. Просмотреть записи");
+            Console.WriteLine("======= Данные =======");
+            Console.WriteLine("4. Сохранить записи в файл");
+            Console.WriteLine("5. Загрузить записи из файла");
+
+            Console.Write("Введите номер действия: ");
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    MenuAddEmployee(employeeData);
+                    break;
+                case "2":
+                    Console.Clear();
+                    employeeData.CheckEmployee();
+                    Console.WriteLine("Нажмите Enter для возврата в главное меню");
+                    Console.ReadLine();
+                    break;
+                case "4":
+                    Console.Clear();
+                    employeeData.SaveToFile();
+                    Console.WriteLine("Записи сохранены в файл");
+                    break;
+                case "5":
+                    Console.Clear();
+                    employeeData.LoadData();
+                    Console.WriteLine("Записи загруженны из файла");
+                    break;
+            }
+        }
+
+        private static void MenuAddEmployee(EmployeeData employeeData)
+        {
+            Console.Clear();
+            Console.WriteLine("======= Добавление записи =======");
             Console.Write("Введите ID сотрудника: ");
-            string str = Console.ReadLine() + "#";
-            str += DateTime.Now.ToString() + "#";
+            int id = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите ФИО сотрудника: ");
-            str += Console.ReadLine() + "#";
+            string name = Console.ReadLine();
             Console.Write("Введите возраст сотрудника: ");
-            str += Console.ReadLine() + "#";
+            int age = Convert.ToInt32(Console.ReadLine());
             Console.Write("Введите рост сотрудника: ");
-            str += Console.ReadLine() + "#";
+            double height = Convert.ToDouble(Console.ReadLine());
             Console.Write("Введите дату рождения сотрудника: ");
-            str += Console.ReadLine() + "#";
+            DateTime birthday = Convert.ToDateTime(Console.ReadLine());
             Console.Write("Введите место рождения сотрудника: ");
-            str += Console.ReadLine();
+            string birthPlace = Console.ReadLine();
 
-            WriteToFile(str);
+            employeeData.AddEmployee(new Employee(id, age, height, name, birthPlace, birthday, DateTime.Now));
 
-            Console.WriteLine("Информация сохранена!");
-        }
-
-        private static void WriteToFile(string text)
-        {
-            using(StreamWriter sw = new StreamWriter(path, true))
-            {
-                sw.Write(text);
-            }
-        }
-
-        private static void CheckFileExists()
-        {
-            FileInfo fileInfo = new FileInfo(path);
-
-            if (!fileInfo.Exists)
-            {
-                fileInfo.Create();
-            }
-        }
-
-        private static int CheckInputNumber()
-        {
-
-            int number;
-
-            while (!int.TryParse(Console.ReadLine(), out number))
-                Console.Write("Повторите ввод: ");
-
-            return number;
+            Console.WriteLine("Запись добавлена, нажмите Enter для возврата в главное меню");
+            Console.ReadLine();
         }
     }
 }

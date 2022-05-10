@@ -22,7 +22,7 @@ namespace SB_Homework07
         /// <summary>
         /// Рост сотрудника
         /// </summary>
-        private int height;
+        private double height;
         /// <summary>
         /// Имя сотрудника
         /// </summary>
@@ -49,7 +49,7 @@ namespace SB_Homework07
         /// <param name="name">Имя сотрудника</param>
         /// <param name="birthplace">Место рождения сотрудника</param>
         /// <param name="birthday">Дата рождения сотрудника</param>
-        public Employee(int id, int age, int height, string name, string birthplace, DateTime birthday)
+        public Employee(int id, int age, double height, string name, string birthplace, DateTime birthday, DateTime dateCreate)
         {
             this.id = id;
             this.age = age;
@@ -57,7 +57,7 @@ namespace SB_Homework07
             this.name = name;
             this.birthplace = birthplace;
             this.birthday = birthday;
-            dateCreate = DateTime.Now;
+            this.dateCreate = dateCreate;
         }
 
         /// <summary>
@@ -69,5 +69,18 @@ namespace SB_Homework07
                        "Возраст: {3}\nРост: {4}\nДата рождения: {5}\nМесто Рождения: {6}",
                        id, dateCreate, name, age, height, birthday, birthplace);
         }
+
+        public override string ToString()
+        {
+            return $"{id}#{dateCreate}#{name}#{age}#{height}#{birthday}#{birthplace}";
+        }
+
+        public int Id { get { return id; } set { id = value; } }
+        public int Age { get { return age; } set { age = value; } }
+        public double Height { get { return height; } set { height = value; } }
+        public string Name { get { return name; } set { name = value; } }
+        public string Birthplace { get { return birthplace; } set { birthplace = value;} }
+        public DateTime DateCreate { get { return dateCreate; } set { dateCreate = value; } }
+        public DateTime Birthday { get { return birthday; } set { birthday = value; } }
     }
 }
