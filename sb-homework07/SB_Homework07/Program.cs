@@ -35,7 +35,13 @@ namespace SB_Homework07
             switch (Console.ReadLine())
             {
                 case "1":
-                    MenuAddEmployee(ref employeeData);
+                    MenuAddEmployee(employeeData);
+                    break;
+                case "2":
+                    MenuEditEmployee(ref employeeData);
+                    break;
+                case "3":
+                    MenuDeletedEmployee(employeeData);
                     break;
                 case "4":
                     Console.Clear();
@@ -66,7 +72,7 @@ namespace SB_Homework07
             }
         }
 
-        private static void MenuAddEmployee(ref EmployeeData employeeData)
+        private static void MenuAddEmployee(EmployeeData employeeData)
         {
             Console.Clear();
             Console.WriteLine("======= Добавление записи =======");
@@ -102,6 +108,64 @@ namespace SB_Homework07
             Console.WriteLine("7 - Сортировка по дате создания записи");
 
             employeeData.SortEmployee(Convert.ToInt32(Console.ReadLine()));
+        }
+
+        private static void MenuDeletedEmployee(EmployeeData employeeData)
+        {
+            Console.Clear();
+            Console.Write("Введите ID сотрудника, которого нужно удалить: ");
+            employeeData.DeleteEmployee(Convert.ToInt32(Console.ReadLine()));
+        }
+
+        private static void MenuEditEmployee(ref EmployeeData employeeData)
+        {
+            Console.Clear();
+            Console.WriteLine("Введите ID сотрудника, запись о котором нужно изменить");
+            int old_id = Convert.ToInt32(Console.ReadLine());
+            Employee tempEmp = employeeData.GetEmploye(old_id);
+                      
+            Console.WriteLine("Что вы хотите изменить?");
+            Console.WriteLine("1 - ID сотрудника");
+            Console.WriteLine("2 - ФИО сотрудника");
+            Console.WriteLine("3 - Возраст сотрудника");
+            Console.WriteLine("4 - Рост сотрудника");
+            Console.WriteLine("5 - Дату рождения сотрудника");
+            Console.WriteLine("6 - Место рождения сотрудника");
+            Console.WriteLine("7 - Дату создания записи сотрудника");
+
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.Write("Введите новое значение ID: ");
+                    tempEmp.Id = Convert.ToInt32(Console.ReadLine());
+                    break;
+                case "2":
+                    Console.Write("Введите новое значенеи ФИО: ");
+                    tempEmp.Name = Console.ReadLine();
+                    break;
+                case "3":
+                    Console.Write("Введите новое значение возраста: ");
+                    tempEmp.Age = Convert.ToInt32(Console.ReadLine());
+                    break;
+                case "4":
+                    Console.Write("Введите новое значение роста: ");
+                    tempEmp.Height = Convert.ToDouble(Console.ReadLine());
+                    break;
+                case "5":
+                    Console.Write("Введите новое значение для даты рождения: ");
+                    tempEmp.Birthday = Convert.ToDateTime(Console.ReadLine());
+                    break;
+                case "6":
+                    Console.WriteLine("Введите новое значение для места рождения: ");
+                    tempEmp.Birthplace = Console.ReadLine();
+                    break;
+                case "7":
+                    Console.Write("Введите новое значение для даты создания записи: ");
+                    tempEmp.DateCreate = Convert.ToDateTime(Console.ReadLine());
+                    break;
+            }
+
+            employeeData.UpdateEmploye(old_id, tempEmp);
         }
     }
 }

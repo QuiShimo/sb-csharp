@@ -30,14 +30,22 @@ namespace SB_Homework07
             employees.Add(emp);
         }
 
-        public void EditEmployee(int id)
+        public Employee GetEmploye(int id)
         {
-            Employee emp = employees.Find(x => x.Id == id);
+           return employees.Find(x => x.Id == id);
+        }
+
+        public void UpdateEmploye(int id, Employee newEmp)
+        {
+            employees = employees.OrderBy(x => x.Id).ToList();
+            employees.RemoveAt(id - 1);
+            employees.Add(newEmp);
         }
 
         public void DeleteEmployee(int id)
         {
-            employees = employees.Where(x => x.Id != id).ToList();
+            Employee deleteEmp = employees.Find(x => x.Id == id);
+            employees.Remove(deleteEmp);
         }
 
         public void CheckEmployee()
