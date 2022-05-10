@@ -75,6 +75,7 @@ namespace SB_Homework07
             return $"{id}#{dateCreate}#{name}#{age}#{height}#{birthday}#{birthplace}";
         }
 
+
         public int Id { get { return id; } set { id = value; } }
         public int Age { get { return age; } set { age = value; } }
         public double Height { get { return height; } set { height = value; } }

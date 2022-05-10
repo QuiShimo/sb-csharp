@@ -13,47 +13,60 @@ namespace SB_Homework07
 
             while (isWork)
             {
-                MainMenu(employeeData);
+                MainMenu(ref employeeData);
             }
 
         }
         
-        private static void MainMenu(EmployeeData employeeData)
+        private static void MainMenu(ref EmployeeData employeeData)
         {
             Console.Clear();
             Console.WriteLine("======= Главное меню =======");
             Console.WriteLine("1. Добавить запись");
-            Console.WriteLine("2. Просмотреть записи");
+            Console.WriteLine("2. Изменить запись");
+            Console.WriteLine("3. Удалить запись");
+            Console.WriteLine("4. Просмотреть записи");
+            Console.WriteLine("5. Сортировка записей");
             Console.WriteLine("======= Данные =======");
-            Console.WriteLine("4. Сохранить записи в файл");
-            Console.WriteLine("5. Загрузить записи из файла");
+            Console.WriteLine("6. Сохранить записи в файл");
+            Console.WriteLine("7. Загрузить записи из файла");
 
             Console.Write("Введите номер действия: ");
             switch (Console.ReadLine())
             {
                 case "1":
-                    MenuAddEmployee(employeeData);
+                    MenuAddEmployee(ref employeeData);
                     break;
-                case "2":
+                case "4":
                     Console.Clear();
                     employeeData.CheckEmployee();
                     Console.WriteLine("Нажмите Enter для возврата в главное меню");
                     Console.ReadLine();
                     break;
-                case "4":
+                case "5":
+                    Console.Clear();
+                    MenuSortedEmployee(ref employeeData);
+                    Console.WriteLine("Нажмите Enter для возврата в главное меню");
+                    Console.ReadLine();
+                    break;
+                case "6":
                     Console.Clear();
                     employeeData.SaveToFile();
                     Console.WriteLine("Записи сохранены в файл");
+                    Console.WriteLine("Нажмите Enter для возврата в главное меню");
+                    Console.ReadLine();
                     break;
-                case "5":
+                case "7":
                     Console.Clear();
                     employeeData.LoadData();
                     Console.WriteLine("Записи загруженны из файла");
+                    Console.WriteLine("Нажмите Enter для возврата в главное меню");
+                    Console.ReadLine();
                     break;
             }
         }
 
-        private static void MenuAddEmployee(EmployeeData employeeData)
+        private static void MenuAddEmployee(ref EmployeeData employeeData)
         {
             Console.Clear();
             Console.WriteLine("======= Добавление записи =======");
@@ -74,6 +87,21 @@ namespace SB_Homework07
 
             Console.WriteLine("Запись добавлена, нажмите Enter для возврата в главное меню");
             Console.ReadLine();
+        }
+
+        private static void MenuSortedEmployee(ref EmployeeData employeeData)
+        {
+            Console.Clear();
+            Console.WriteLine("======= Сортировка записей =======");
+            Console.WriteLine("1 - Сортировка по ID");
+            Console.WriteLine("2 - Сортировка по ФИО");
+            Console.WriteLine("3 - Сортировка по возрату");
+            Console.WriteLine("4 - Сортировка по росту");
+            Console.WriteLine("5 - Сортировка по дате рождения");
+            Console.WriteLine("6 - Сортировка по месту рождения");
+            Console.WriteLine("7 - Сортировка по дате создания записи");
+
+            employeeData.SortEmployee(Convert.ToInt32(Console.ReadLine()));
         }
     }
 }

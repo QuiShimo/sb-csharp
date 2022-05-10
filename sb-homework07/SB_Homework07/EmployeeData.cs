@@ -49,6 +49,34 @@ namespace SB_Homework07
             }
         }
 
+        public void SortEmployee(int n)
+        {
+            switch (n)
+            {
+                case 1:
+                    employees = employees.OrderByDescending(x => x.Id).ToList();
+                    break;
+                case 2:
+                    employees = employees.OrderByDescending(x => x.Name).ToList();
+                    break;
+                case 3:
+                    employees = employees.OrderByDescending(x => x.Age).ToList();
+                    break;
+                case 4:
+                    employees = employees.OrderByDescending(x => x.Height).ToList();
+                    break;
+                case 5:
+                    employees = employees.OrderByDescending(x => x.Birthday).ToList();
+                    break;
+                case 6:
+                    employees = employees.OrderByDescending(x => x.Birthplace).ToList();
+                    break;
+                case 7:
+                    employees = employees.OrderByDescending(x => x.DateCreate).ToList();
+                    break;
+            }
+        }
+
 
         public void SaveToFile()
         {
