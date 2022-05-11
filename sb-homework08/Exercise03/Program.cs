@@ -7,16 +7,10 @@ while (true)
     if (Int32.TryParse(Console.ReadLine(), out number))
     {
         if (hs.Add(number))
-        {
             Console.WriteLine("Число успешно добавлено!");
-        }
         else
-        {
             Console.WriteLine("Число уже есть в коллекции");
-        }
     }
     else
-    {
         Console.WriteLine("Ошибка! Повторите ввод числа.");
-    }
 }

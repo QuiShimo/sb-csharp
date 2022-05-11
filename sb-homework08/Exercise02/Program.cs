@@ -29,14 +29,10 @@ static void InputData(Dictionary<string, string> phoneBook)
         Console.Write("ВВедите ФИО владельца: ");
         fullName = Console.ReadLine();
 
-        if (phoneBook.TryAdd(phoneNumber, fullName))
-        {
+        if (phoneBook.TryAdd(phoneNumber, fullName)) 
             Console.WriteLine("Запись успешно добавлена");
-        }
-        else
-        {
+        else 
             Console.WriteLine("Данный телефон уже есть в телефонной книге");
-        }
     }
 }
 
@@ -52,12 +48,8 @@ static void SearchData(Dictionary<string, string> phoneBook)
     Console.Write("Введите номер телефона для поиска: ");
     string searchPhoneNumber = Console.ReadLine();
 
-    if (phoneBook.TryGetValue(searchPhoneNumber, out searchRezult))
-    {
+    if (phoneBook.TryGetValue(searchPhoneNumber, out searchRezult)) 
         Console.WriteLine($"Номер телефона найден! Владелец: {searchRezult}");
-    }
-    else
-    {
+    else 
         Console.WriteLine("Номер телефона не найден!");
-    }
 }
