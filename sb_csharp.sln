@@ -3,25 +3,43 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework01", "..\sb-csharp\sb-homework01\SB_Homework01.csproj", "{2529F433-264B-4DAA-B66C-4137A8EACFC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework01", "sb-homework01\SB_Homework01.csproj", "{2529F433-264B-4DAA-B66C-4137A8EACFC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework02", "..\sb-csharp\sb-homework02\SB_Homework02.csproj", "{8725D0E5-DCFB-49AF-A794-407AAB9BC191}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework02", "sb-homework02\SB_Homework02.csproj", "{8725D0E5-DCFB-49AF-A794-407AAB9BC191}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SB_Homework03", "SB_Homework03", "{37C7F30D-CA9E-475F-8251-8EB448038915}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_01", "..\sb-csharp\sb-homework03\Exercise_01\Exercise_01.csproj", "{B1BE76DB-3FE8-4B9C-9679-C2D273181B1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_01", "sb-homework03\Exercise_01\Exercise_01.csproj", "{B1BE76DB-3FE8-4B9C-9679-C2D273181B1F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_02", "..\sb-csharp\sb-homework03\Exercise_02\Exercise_02.csproj", "{60BF00B9-D740-42D3-83A3-267DA1B903EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_02", "sb-homework03\Exercise_02\Exercise_02.csproj", "{60BF00B9-D740-42D3-83A3-267DA1B903EF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_03", "..\sb-csharp\sb-homework03\Exercise_03\Exercise_03.csproj", "{55088BCC-A8FB-452F-93F6-D848A4048041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_03", "sb-homework03\Exercise_03\Exercise_03.csproj", "{55088BCC-A8FB-452F-93F6-D848A4048041}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SB_Homework04", "SB_Homework04", "{58EBC895-A859-43EC-8123-560AAFB74EB1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_01", "..\sb-csharp\sb-homework04\Exercise_01\Exercise_01.csproj", "{AFD00042-8B6B-4EF0-AA25-85968E588F57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_01", "sb-homework04\Exercise_01\Exercise_01.csproj", "{AFD00042-8B6B-4EF0-AA25-85968E588F57}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_02", "..\sb-csharp\sb-homework04\Exercise_02\Exercise_02.csproj", "{B2D87661-D422-4772-8CC5-593B9CA4AA73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_02", "sb-homework04\Exercise_02\Exercise_02.csproj", "{B2D87661-D422-4772-8CC5-593B9CA4AA73}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_03", "..\sb-csharp\sb-homework04\Exercise_03\Exercise_03.csproj", "{9541022A-ED32-44D6-8FB9-15D67FE49711}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_03", "sb-homework04\Exercise_03\Exercise_03.csproj", "{9541022A-ED32-44D6-8FB9-15D67FE49711}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework05", "sb-homework05\SB_Homework05.csproj", "{25C63A0F-93D2-4B5E-BFD0-E8E8589E1FDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework06", "sb-homework06\SB_Homework06.csproj", "{49B27F42-00A3-49BC-A202-77B7A30C3A30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework07", "sb-homework07\SB_Homework07.csproj", "{7811C162-CC20-45AA-997B-DCE6A1AB12C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SB_Homework08", "SB_Homework08", "{407EE482-B063-4421-912B-A63FE3E39FCD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise01", "sb-homework08\Exercise01\Exercise01.csproj", "{F9C4694A-DFB5-46D0-A431-67722F1AE998}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise04", "sb-homework08\Exercise04\Exercise04.csproj", "{3627123B-45F5-4D57-9065-5E78B285E8ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise03", "sb-homework08\Exercise03\Exercise03.csproj", "{81CD091A-2155-4339-AA37-683E4961B017}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise02", "sb-homework08\Exercise02\Exercise02.csproj", "{BBFE55BF-76FF-48ED-B786-18B4B442155C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SB_Homework09", "sb-homework09\SB_Homework09.csproj", "{0D08CC73-8124-4AD9-922D-E6F8475D77B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +79,38 @@ Global
 		{9541022A-ED32-44D6-8FB9-15D67FE49711}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9541022A-ED32-44D6-8FB9-15D67FE49711}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9541022A-ED32-44D6-8FB9-15D67FE49711}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25C63A0F-93D2-4B5E-BFD0-E8E8589E1FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25C63A0F-93D2-4B5E-BFD0-E8E8589E1FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25C63A0F-93D2-4B5E-BFD0-E8E8589E1FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25C63A0F-93D2-4B5E-BFD0-E8E8589E1FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B27F42-00A3-49BC-A202-77B7A30C3A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B27F42-00A3-49BC-A202-77B7A30C3A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B27F42-00A3-49BC-A202-77B7A30C3A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B27F42-00A3-49BC-A202-77B7A30C3A30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7811C162-CC20-45AA-997B-DCE6A1AB12C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7811C162-CC20-45AA-997B-DCE6A1AB12C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7811C162-CC20-45AA-997B-DCE6A1AB12C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7811C162-CC20-45AA-997B-DCE6A1AB12C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9C4694A-DFB5-46D0-A431-67722F1AE998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9C4694A-DFB5-46D0-A431-67722F1AE998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9C4694A-DFB5-46D0-A431-67722F1AE998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9C4694A-DFB5-46D0-A431-67722F1AE998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3627123B-45F5-4D57-9065-5E78B285E8ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3627123B-45F5-4D57-9065-5E78B285E8ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3627123B-45F5-4D57-9065-5E78B285E8ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3627123B-45F5-4D57-9065-5E78B285E8ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81CD091A-2155-4339-AA37-683E4961B017}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81CD091A-2155-4339-AA37-683E4961B017}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81CD091A-2155-4339-AA37-683E4961B017}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81CD091A-2155-4339-AA37-683E4961B017}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBFE55BF-76FF-48ED-B786-18B4B442155C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBFE55BF-76FF-48ED-B786-18B4B442155C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBFE55BF-76FF-48ED-B786-18B4B442155C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBFE55BF-76FF-48ED-B786-18B4B442155C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D08CC73-8124-4AD9-922D-E6F8475D77B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D08CC73-8124-4AD9-922D-E6F8475D77B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D08CC73-8124-4AD9-922D-E6F8475D77B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D08CC73-8124-4AD9-922D-E6F8475D77B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +122,10 @@ Global
 		{AFD00042-8B6B-4EF0-AA25-85968E588F57} = {58EBC895-A859-43EC-8123-560AAFB74EB1}
 		{B2D87661-D422-4772-8CC5-593B9CA4AA73} = {58EBC895-A859-43EC-8123-560AAFB74EB1}
 		{9541022A-ED32-44D6-8FB9-15D67FE49711} = {58EBC895-A859-43EC-8123-560AAFB74EB1}
+		{F9C4694A-DFB5-46D0-A431-67722F1AE998} = {407EE482-B063-4421-912B-A63FE3E39FCD}
+		{3627123B-45F5-4D57-9065-5E78B285E8ED} = {407EE482-B063-4421-912B-A63FE3E39FCD}
+		{81CD091A-2155-4339-AA37-683E4961B017} = {407EE482-B063-4421-912B-A63FE3E39FCD}
+		{BBFE55BF-76FF-48ED-B786-18B4B442155C} = {407EE482-B063-4421-912B-A63FE3E39FCD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C63F28B9-663F-4DEA-9010-C180783EA38F}
