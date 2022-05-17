@@ -11,7 +11,7 @@
 - [x] [7. Структуры и введение в ООП](https://github.com/QuiShimo/sb-csharp/tree/main/sb-homework07)
 - [x] [8. Коллекции](https://github.com/QuiShimo/sb-csharp/tree/main/sb-homework08)
 - [x] [9. Работа с сетью](https://github.com/QuiShimo/sb-csharp/tree/main/sb-homework09)
-- [ ] 10. Визуальное программирование. Основы технологии Windows Presentation Foundation
+- [x] [10. Визуальное программирование. Основы технологии Windows Presentation Foundation](https://github.com/QuiShimo/sb-csharp/tree/main/sb-homework10)
 - [ ] 11. Глубокое погружение в ООП. Часть 1
 - [ ] 12. Глубокое погружение в ООП. Часть 2
 - [ ] 13. Глубокое погружение в ООП. Часть 3
