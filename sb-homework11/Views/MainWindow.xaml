@@ -1,0 +1,24 @@
+﻿<Window x:Class="SB_Homework11.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewsmodel="clr-namespace:SB_Homework11.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <viewsmodel:MainVM/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.3*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid ColumnWidth="*" Grid.Column="0" x:Name="ClientsList" ItemsSource="{Binding ClientsListValue}" ColumnHeaderHeight="25"/>
+        <StackPanel Grid.Column="1" Orientation="Vertical">
+            <Button Content="Добавить пользователя" Width="150" Height="25" Margin="10" />
+            <Button Content="Сохранить изменения" Width="150" Height="25" Margin="10" />
+            <Button Content="Удалить пользователя" Width="150" Height="25" Margin="10" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,21 +1,28 @@
-﻿using SB_Homework11.Entity;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using SB_Homework11.Models.Entities;
 
-namespace SB_Homework11.Storage
+namespace SB_Homework11.Models.Repositories
 {
-    internal class ClientData
+    internal class ClientRepository
     {
-        public BindingList<Client> Clients = new BindingList<Client>();
+        private List<Client> _clients = new List<Client>();
+        public List<Client> PublicClients;
 
-        public ClientData()
+        public ClientRepository()
         {
             LoadData();
+            PublicClients = new List<Client>(_clients);
         }
 
         public void LoadData()
         {
+            // добавить обработку, если файла нет
             if (File.Exists("client.txt"))
             {
                 using (StreamReader sr = new StreamReader("client.txt"))
@@ -25,7 +32,7 @@ namespace SB_Homework11.Storage
                     while ((line = sr.ReadLine()) != null)
                     {
                         string[] data = line.Split('#');
-                        Clients.Add(new Client(data[0], data[1], data[2], data[3], data[4], data[5]));
+                        _clients.Add(new Client(data[0], data[1], data[2], data[3], data[4], data[5]));
                     }
                 }
             }
@@ -33,11 +40,11 @@ namespace SB_Homework11.Storage
 
         public void SaveData()
         {
-            if (Clients.Count > 0)
+            if (_clients.Count > 0)
             {
                 using (StreamWriter sw = new StreamWriter("client.txt"))
                 {
-                    foreach(Client client in Clients)
+                    foreach (Client client in _clients)
                         sw.WriteLine(client.ToString());
                 }
             }
